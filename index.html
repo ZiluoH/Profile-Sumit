@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>This is title</title>
+<title>Profile Form</title>
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
     
-    <script src="https://use.fontawesome.com/7c15bf4a68.js"></script>
+  <script src="https://use.fontawesome.com/7c15bf4a68.js"></script>
 	<link rel="stylesheet" href="css/animate.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Custom css -->
-    <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <div class="container">
+<div id="FormInfo">
   <h1>New Profile</h1>
-  <div class="form-inline row">
-  <input class="form-control" placeholder="First Name" id="FirstName">
-  <input class="form-control" placeholder="Last Name" id="LastName">
+  <!-- First Name form -->
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="FirstName">First Name:</label>
+    <div class="col-sm-10">
+      <input type="FirstName" class="form-control" id="FirstName" placeholder="First Name">
+    </div>
+  </div>
+  <!-- Last Name form -->
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="LastName">Last Name:</label>
+    <div class="col-sm-10">
+      <input type="LastName" class="form-control" id="LastName" placeholder="Last Name">
+    </div>
+  </div>
+  <!-- Gender from with radio input -->
+  <div class="form-group">
+    <label class="control-label col-sm-2">Gender:</label>
+    <div class="col-sm-10 radio">
+      <label><input type="radio" name="genderRadio" value="Male">Male</label>
+      <label><input type="radio" name="genderRadio" value="Female">Female</label>
+    </div>   
+  </div>
+  <!-- E-Mail form -->
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Email">E-Mail:</label>
+    <div class="col-sm-10">
+      <input type="LastName" class="form-control" id="Email" placeholder="E-Mail Address">
+    </div>
+  </div>
+  <!-- Phone input -->
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="Phone">Phone Number:</label>
+    <div class="col-sm-10">
+      <input type="LastName" class="form-control" id="PhoneNumber" placeholder="Phone Number">
+    </div>
+  </div>
+  <!-- Color Question -->
+  <div class="form-group">
+    <label class="control-label col-sm-2">Gender:</label>
+    <div class="col-sm-10">
+      <select class="form-control">
+        <option class="ColorQuestion" value="">What is your favorite color?</option>
+        <option class="ColorQuestion" value="Red">Red</option>
+        <option class="ColorQuestion" value="Blue">Blue</option>
+        <option class="ColorQuestion" value="White">White</option>
+        <option class="ColorQuestion" value="Black">Black</option>
+        <option class="ColorQuestion" value="Yellow">Yellow</option>
+      </select>
+    </div>   
   </div>
 
-  <div id="gender">
-  <p>Gender: </p>
-  <label><input type="radio" name="optradio" id="Male">Male</label>
-  <label><input type="radio" name="optradio" id="Female">Female</label>
-  </div>
-
-  <div class="col-6">
-  <input class="form-control" placeholder="Email Address" id="EmailAddress">
-  </div>
-
-  <input class="form-control" placeholder="Phone Number" id="PhoneNumber">
-
-  <select class="form-control" id="colorSelect">
-    <option selected>Select your favorite color</option>
-    <option value="1" id="Red">Red</option>
-    <option value="2" id="NotRed">Not Red</option>
-  </select>
-
-  <div id="birthPlace">
-  <p>Continent of birth: </p>
-  <label><input type="radio" name="optradio" id="Africa">Africa</label>
-  <label><input type="radio" name="optradio" id="Asia">Asia</label>
-  <label><input type="radio" name="optradio" id="Austraila">Austraila</label>
-  <label><input type="radio" name="optradio" id="Europe">Europe</label>
-  <label><input type="radio" name="optradio" id="North America">North America</label>
-  <label><input type="radio" name="optradio" id="South America">South America</label>
-  </div>
-
-  <button type="button" class="btn" id="Submit">Submit</button>
-
-
+  <div class="form-group">
+    <label class="control-label col-sm-2">Continent of Birth:</label>
+    <div class="col-sm-10 radio">
+      <label><input type="radio" name="birthRadio" value="Africa">Africa</label>
+      <label><input type="radio" name="birthRadio" value="Asia">Asia</label>
+      <label><input type="radio" name="birthRadio" value="Europe">Europe</label>
+      <label><input type="radio" name="birthRadio" value="North America">North America</label>
+      <label><input type="radio" name="birthRadio" value="South America">South America</label>
+      <label><input type="radio" name="birthRadio" value="Antarctica">Antarctica</label>
+      <label><input type="radio" name="birthRadio" value="Australia">Australia</label>
+    </div>   
+  </div> 
+  <div class="col-sm-2"><button type="button" id="SummitButton" class="btn btn-primary">Summit Profile</button></div>
+</div>
 
 </div>
+
 
 
 
@@ -66,7 +97,7 @@
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- Bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
