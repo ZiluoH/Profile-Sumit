@@ -45,8 +45,9 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="Email">E-Mail:</label>
     <div class="col-sm-10">
-      <input type="LastName" class="form-control" id="Email" placeholder="E-Mail Address">
+      <input type="Email" class="form-control" id="Email" placeholder="E-Mail Address" onblur="EmailValid()">
     </div>
+    <div id="ErrorEmail"></div>
   </div>
   <!-- Phone input -->
   <div class="form-group">

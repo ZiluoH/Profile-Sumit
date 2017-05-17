@@ -1,1 +1,8 @@
-*
+body{
+	background-image: url("../img/background.jpeg");
+}
+
+#FormInfo{
+	background-color: #FFFFFF;
+	height: 800px;
+}
