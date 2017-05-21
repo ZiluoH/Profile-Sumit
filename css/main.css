@@ -10,4 +10,9 @@ body{
 
 #SummitButton{
 	margin-left: 15px;
+	margin-top: 30px;
+}
+
+#TitleName{
+	margin-left: 13px;
 }
